@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog - Saúde dos Animais Silvestres</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f5fff5;
+    margin:0;
+}
+
+header{
+    background-color:#2e8b57;
+    color:white;
+    text-align:center;
+    max-width:800px;
+    margin:0 auto;
+    padding:20px;
+}
+
+main{
+    background:white;
+    color:#2e8b57;
+    max-width:800px;
+    margin:0 auto;
+    padding:20px;
+}
+
+article{
+    display:flex;
+    margin-bottom:20px;
+    border-bottom:1px solid #ccc;
+    padding-bottom:20px;
+}
+
+img{
+    width:90px;
+    height:90px;
+    margin-right:15px;
+    border-radius:10px;
+}
+
+.artigo-autor{
+    font-weight:bold;
+}
+
+button{
+    background:#2e8b57;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    margin-right:10px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#206040;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>🐹 Blog Saúde Animal</h1>
+<p>Dicas e cuidados para porquinhos-da-índia e outros pequenos animais.</p>
+</header>
+
+<main>
+
+<article>
+
+<img src="https://cdn-icons-png.flaticon.com/512/3069/3069172.png" alt="Porquinho-da-Índia">
+
+<div>
+
+<h2>Cuidados com o Porquinho-da-Índia</h2>
+
+<p class="artigo-autor">Por: Diana Batista</p>
+
+<p>
+O porquinho-da-índia precisa de uma alimentação rica em feno, verduras frescas,
+água limpa e um ambiente sempre higienizado para viver com saúde.
+</p>
+
+<button>❤️ <span>0</span></button>
+<button>👍 <span>0</span></button>
+
+</div>
+
+</article>
+
+<article>
+
+<img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Patinha">
+
+<div>
+
+<h2>Importância da Higiene</h2>
+
+<p class="artigo-autor">Por: Diana Batista</p>
+
+<p>
+Manter a gaiola limpa evita doenças e garante mais conforto ao animal.
+Também é importante oferecer brinquedos e espaço para ele se movimentar.
+</p>
+
+<button>❤️ <span>0</span></button>
+<button>👍 <span>0</span></button>
+
+</div>
+
+</article>
+
+</main>
+
+<script>
+
+const botoes = document.querySelectorAll("button");
+
+botoes.forEach(function(botao){
+
+    let clicou = false;
+
+    botao.addEventListener("click", function(){
+
+        let contador = botao.querySelector("span");
+
+        if(clicou === false){
+            contador.textContent++;
+            clicou = true;
+        }else{
+            contador.textContent--;
+            clicou = false;
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
